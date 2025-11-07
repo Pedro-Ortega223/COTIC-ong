@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,24 +9,96 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F6EFD2;
+    background-color: #EEEEEE;
+}
+
+header {
+    display: flex; /* permite alinhamento flexível */
+    justify-content: space-around; /* logo à esquerda, links à direita */
+    align-items: center; /* alinha verticalmente no centro */
+    padding: 0% 15% 0% 0%;
+    background-color: #fff;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.cabecalho_logo {
+    display: flex;
+    align-items: center;
+    padding: 0 35% 0 0 ;
+}
+
+
+.cabecalho_ancoras {
+    display: flex;
+    gap: 100px;
+    font-weight: 600;
+    font-size: 24px;
+    align-items: center; /* centraliza os textos verticalmente */
+}
+
+.cabecalho_ancoras_nome {
+    text-decoration: none;
+    color: #000;
+}
+
+#maos {
+    position: absolute; /* permite posicionar sobre outros elementos */
+    top: 53%; /* distância do topo da página */
+    left: 12%; /* centraliza horizontalmente */
+    transform: translateX(-50%); /* corrige o centramento */
+    width: 350px; /* tamanho da imagem */
+    height: auto; /* mantém proporção */
+    z-index: 1000; /* garante que fique acima do slide */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  
+}
+
+#coracao {
+    position: absolute; /* permite posicionar sobre outros elementos */
+    top: 18%; /* distância do topo da página */
+    left: 87%; /* centraliza horizontalmente */
+    transform: translateX(-50%); /* corrige o centramento */
+    width: 230px; /* tamanho da imagem */
+    height: auto; /* mantém proporção */
+    z-index: 1000; /* garante que fique acima do slide */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .imagens {
     margin: 0 auto;
-    width: 800px;
-    height: 400px;
+    width: 100% ; /* agora ocupa toda a largura da tela */
+    max-width: 1400px; /* limite opcional para não estourar telas grandes */
+    height: 600px ; /* aumentei a altura do slide */
     overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-top: 2%;
 }
 
 .imagens_slide {
     width: 400%;
-    height: 400px;
+    height: 100%;
     display: flex;
+    border-radius: 20px;
+    transition: 1.5s;
 }
 
 .imagens_slide input {
@@ -38,10 +112,22 @@ body{
 }
 
 .slide img {
-    width: 800px;
+    width: 100%; /* faz a imagem ocupar todo o espaço disponível */
+    height: 100%; /* cobre toda a altura do container */
+    object-fit: cover; /* corta a imagem proporcionalmente sem distorcer */
+    border-radius: 20px;
 }
 
-.navegacao_auto div{
+/* Navegação automática */
+.navegacao_auto {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navegacao_auto div {
     border: 2px solid #20a6ff;
     padding: 5px;
     border-radius: 10px;
@@ -49,27 +135,20 @@ body{
     transition: 0.75s;
 }
 
-.navegacao_auto {
-    position: absolute;
-    width: 800px;
-    margin-top: 360px;
-    display: flex;
-    justify-content: center;
-}
-
 .navegacao_auto div:not(:last-child) {
     margin-right: 40px;
 }
 
+/* Navegação manual */
 .navegacao_manual {
     position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    width: 100%;
+    bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
-.btn-manual{
+.btn-manual {
     border: 2px solid #fff;
     padding: 5px;
     border-radius: 10px;
@@ -85,8 +164,9 @@ body{
     background-color: #fff;
 }
 
+/* Controle dos slides */
 #radio1:checked ~ .first {
-    margin-left:0;
+    margin-left: 0;
 }
 
 #radio2:checked ~ .first {
@@ -95,4 +175,60 @@ body{
 
 #radio3:checked ~ .first {
     margin-left: -50%;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0 30% 0 13.3%;
+    margin-top: 3%;
+}
+
+.texto_titulo {
+    font-family: "Lora", serif;
+    font-size: 60px;
+}
+
+.texto_subtitulo {
+    font-family: "Lora", serif;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.texto_paragrafo {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 1%;
+}
+
+.imagem_equipe {
+    margin-top: 5%;
+}
+
+.img_texto {
+    display: flex;
+    align-items: center;
+    
+}
+
+.texto_img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #FE6244;
+    padding: 8.23% 4%;
+    margin-top: 4.75%;
+    
+}
+
+.titulo_img {
+    font-family: "Lora", serif;
+    font-size: 60px;
+}
+
+.paragrafo_img {
+    font-family: "Lora", serif;
+    font-size: 30px;
 }
