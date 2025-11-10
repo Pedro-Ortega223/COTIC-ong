@@ -9,16 +9,13 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #EEEEEE;
 }
 
 header {
-    display: flex; /* permite alinhamento flexível */
-    justify-content: space-around; /* logo à esquerda, links à direita */
-    align-items: center; /* alinha verticalmente no centro */
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
     padding: 0% 15% 0% 0%;
     background-color: #fff;  
     position: fixed;
@@ -28,6 +25,32 @@ header {
     z-index: 3000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 2000;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.about-titulo {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5%;
+}
+
+.about-titulo-texto {
+    color: #FE6244;
+    font-family: "Lora", serif;
+    font-size: 60px;
+    margin-top: 10%;
+}
+
+.about-paragrafo {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Lora", serif;
+    padding: 0 15%;
 }
 
 .conteudo {
@@ -49,7 +72,7 @@ header {
     gap: 100px;
     font-weight: 600;
     font-size: 24px;
-    align-items: center; /* centraliza os textos verticalmente */
+    align-items: center; 
 }
 
 .cabecalho_ancoras_nome {
@@ -58,34 +81,34 @@ header {
 }
 
 #maos {
-    position: absolute; /* permite posicionar sobre outros elementos */
-    top: 53%; /* distância do topo da página */
-    left: 12%; /* centraliza horizontalmente */
-    transform: translateX(-50%); /* corrige o centramento */
-    width: 350px; /* tamanho da imagem */
-    height: auto; /* mantém proporção */
-    z-index: 1000; /* garante que fique acima do slide */
+    position: absolute; 
+    top: 53%; 
+    left: 12%; 
+    transform: translateX(-50%);  
+    width: 350px; 
+    height: auto; 
+    z-index: 1000; 
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  
 }
 
 #coracao {
-    position: absolute; /* permite posicionar sobre outros elementos */
-    top: 18%; /* distância do topo da página */
-    left: 87%; /* centraliza horizontalmente */
-    transform: translateX(-50%); /* corrige o centramento */
-    width: 230px; /* tamanho da imagem */
-    height: auto; /* mantém proporção */
-    z-index: 1000; /* garante que fique acima do slide */
+    position: absolute;
+    top: 18%; 
+    left: 87%; 
+    transform: translateX(-50%); 
+    width: 230px; 
+    height: auto; 
+    z-index: 1000; 
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .imagens {
     margin: 0 auto;
-    width: 100% ; /* agora ocupa toda a largura da tela */
-    max-width: 1400px; /* limite opcional para não estourar telas grandes */
-    height: 600px ; /* aumentei a altura do slide */
+    width: 100% ; 
+    max-width: 1400px; 
+    height: 600px ; 
     overflow: hidden;
     border-radius: 20px;
     position: relative;
@@ -112,13 +135,12 @@ header {
 }
 
 .slide img {
-    width: 100%; /* faz a imagem ocupar todo o espaço disponível */
-    height: 100%; /* cobre toda a altura do container */
-    object-fit: cover; /* corta a imagem proporcionalmente sem distorcer */
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
     border-radius: 20px;
 }
 
-/* Navegação automática */
 .navegacao_auto {
     position: absolute;
     width: 100%;
@@ -139,7 +161,6 @@ header {
     margin-right: 40px;
 }
 
-/* Navegação manual */
 .navegacao_manual {
     position: absolute;
     width: 100%;
@@ -164,7 +185,6 @@ header {
     background-color: #fff;
 }
 
-/* Controle dos slides */
 #radio1:checked ~ .first {
     margin-left: 0;
 }
@@ -241,16 +261,26 @@ header {
     justify-content: center;
     margin-top: 3%;
 }
-.unidade1 {
+.unidade {
     display: flex;
     justify-content: space-around;
-    margin-top: 5%;
+    margin-top: 2%;
     padding: 2%;
-    font-family: "Lora", serif;
-    font-size: 20px;
-    font-weight: 500;
 }
-.mapa-container {
+
+.par_unidade {
+    font-family: "Lora", serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 5%;
+    padding: 6%;
+}
+
+.destaque {
+    color: #FE6244;
+}
+
+.mapa {
   width: 100%;
   max-width: 800px;
   margin: 40px auto;
@@ -260,10 +290,12 @@ header {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.mapa-container iframe {
+.mapa iframe {
   width: 100%;
   height: 450px;
 }
 
-
-
+footer {
+    background-color: #000;
+    padding: 5%;
+}
