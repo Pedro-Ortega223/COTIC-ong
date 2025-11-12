@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="shortcut icon" type="imagem/x-icon" href="./img/logo-guia.ico.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>COTIC</title>
 </head>
 <body>
@@ -17,7 +17,6 @@
             <a href="COTIC_ong.html" class="cabecalho_ancoras_nome">COTIC</a>
             <a href="sobre-nos-COTIC.html" class="cabecalho_ancoras_nome">Sobre nós</a>
             <a href="Cadastro.html" class="cabecalho_ancoras_nome">Cadastro</a>
-            <a href="" class="cabecalho_ancoras_nome">Contato</a>
         </div>
     </header>
 <div class="cadastro">
@@ -26,11 +25,11 @@
             <h1>Cadastro COTIC</h1>
             <div class="input_box">
                 <input placeholder="Usuário" type="email">
-                <i class="bx bxs-user"></i>
+                <i class="bi bi-person-fill"></i>
             </div>
             <div class="input_box">
-                <input placeholder="Senha" type="password">
-                <i class="bx bxs-lock-alt"></i>
+                <input placeholder="Senha" type="password" id="senha">
+                <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
             </div>
             <div class="lembrar_senha">
                 <label>
@@ -46,6 +45,6 @@
         </form>
     </main>
 </div>
-
+<script src="./js/script.js"></script>
 </body>
 </html>
