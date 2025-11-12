@@ -82,6 +82,10 @@ header {
     color: #000;
 }
 
+.cabecalho_ancoras_nome:hover {
+    color: #FE6244;
+}
+
 #maos {
     position: absolute; 
     top: 53%; 
@@ -269,6 +273,16 @@ header {
     justify-content: center;
     margin-top: 3%;
 }
+
+.titulo_unidade_sub {
+    font-family: "Lora", serif;
+    font-weight: 500;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .unidade {
     display: flex;
     justify-content: space-around;
