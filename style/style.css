@@ -294,7 +294,7 @@ header {
 }
 
 footer {
-    background-color: #323232;
+    background-color: #7d7d7d;
 }
 
 .footer{
@@ -382,6 +382,10 @@ footer {
     font-size: 20px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+#btn-senha {
+    cursor: pointer;
 }
 
 .lembrar_senha {
