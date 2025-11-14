@@ -396,6 +396,7 @@ footer {
 
 .lembrar_senha label input {
     accent-color: #fff;
+    cursor: pointer;
 }
 
 .lembrar_senha a {
